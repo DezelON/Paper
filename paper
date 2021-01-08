@@ -59,6 +59,13 @@ case "$1" in
         scripts/build.sh "$basedir" "--jar" || exit 1
     ) || failed=1
     ;;
+    "g" | "gravit")
+    (
+        set -e
+        cd "$basedir"
+        scripts/build.sh "$basedir" "--gravit" || exit 1
+    ) || failed=1
+    ;;
     "b" | "build")
     (
         set -e
